@@ -15,4 +15,4 @@ Name=• Decrypt
 Name[el]=• Αποκρυπτογράφηση
 Name[nl]=• Ontsleutelen
 Icon=preferences-security
-Exec=age -d -i ~/.age-key/"$(whoami)".age-key %f > %f.tmp && rename 's/(.*).{8}/$1/' *.age.tmp
+Exec=age -d -i ~/.age-key/"$(whoami)".age-key %f > %f.tmp && prename 's/(.*).{8}/$1/' *.age.tmp
