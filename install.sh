@@ -32,8 +32,11 @@ fi
 # .desktop files are copied to ServiceMenus dir for context menu on Dolphin
 # and an XML file to MIME dir for files with .age extension to distinguish with an icon and a description.
 echo "Copying files.."
-cp age-encrypt.desktop ~/.local/share/kservices5/ServiceMenus/
-cp age-decrypt.desktop ~/.local/share/kservices5/ServiceMenus/
+mkdir -p ~/.local/share/kio/servicemenus
+cp age-encrypt.desktop ~/.local/share/kio/servicemenus
+cp age-decrypt.desktop ~/.local/share/kio/servicemenus
+chmod +x ~/.local/share/kio/servicemenus/age-encrypt.desktop
+chmod +x ~/.local/share/kio/servicemenus/age-decrypt.desktop
 xdg-mime install --mode user --novendor age-mime.xml
 
 # Create age key for current user at home folder .age-key
