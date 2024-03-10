@@ -15,7 +15,7 @@ Name=• Compress & Encrypt
 Name[el]=• Συμπίεση & Κρυπτογράφηση
 Name[nl]=• Comprimeren en versleutelen
 Icon=preferences-security
-Exec=tar -pzcf "%f.tar.gz" %f && age -R ~/.age-key/"$(whoami)" "%f.tar.gz" > "%f.tar.gz.age" && rm -f "%f.tar.gz"
+Exec=tar -pzcf "%f.tar.gz" $(basename %f) && age -R ~/.age-key/"$(whoami)" "%f.tar.gz" > "%f.tar.gz.age" && rm -f "%f.tar.gz"
 
 [Desktop Action EncryptAGE]
 Name=• Encrypt
